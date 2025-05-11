@@ -1,0 +1,15 @@
+artifact_uri: file:///home/mustafa/Studies/mlops-project/mlruns/0/1e3b5da5f78d4f33add21e06ea66ec55/artifacts
+end_time: 1733608785880
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1e3b5da5f78d4f33add21e06ea66ec55
+run_name: likeable-hare-636
+run_uuid: 1e3b5da5f78d4f33add21e06ea66ec55
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733608783003
+status: 3
+tags: []
+user_id: mustafa

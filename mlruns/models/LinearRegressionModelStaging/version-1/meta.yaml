@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1733609247710
+current_stage: None
+description: null
+last_updated_timestamp: 1733609247710
+name: LinearRegressionModelStaging
+run_id: e3af1fbbd253418ca88ccc4a6826793a
+run_link: null
+source: file:///home/mustafa/Studies/mlops-project/mlruns/0/e3af1fbbd253418ca88ccc4a6826793a/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///home/mustafa/Studies/mlops-project/mlruns/0/e3af1fbbd253418ca88ccc4a6826793a/artifacts/model
+user_id: null
+version: 1

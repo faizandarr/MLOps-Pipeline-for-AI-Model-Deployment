@@ -1,0 +1,15 @@
+artifact_uri: file:///home/mustafa/Studies/mlops-project/mlruns/0/03c232ddbbfe434f979d5ef1a098cb7b/artifacts
+end_time: 1733609231077
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 03c232ddbbfe434f979d5ef1a098cb7b
+run_name: sassy-calf-479
+run_uuid: 03c232ddbbfe434f979d5ef1a098cb7b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733609228609
+status: 3
+tags: []
+user_id: mustafa

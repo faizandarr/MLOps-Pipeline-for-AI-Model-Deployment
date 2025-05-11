@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1733608785878
+current_stage: None
+description: null
+last_updated_timestamp: 1733608785878
+name: LinearRegressionModel
+run_id: 1e3b5da5f78d4f33add21e06ea66ec55
+run_link: null
+source: file:///home/mustafa/Studies/mlops-project/mlruns/0/1e3b5da5f78d4f33add21e06ea66ec55/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///home/mustafa/Studies/mlops-project/mlruns/0/1e3b5da5f78d4f33add21e06ea66ec55/artifacts/model
+user_id: null
+version: 1
