@@ -27,7 +27,7 @@ with app.app_context():
     
 # Load the trained model
 try:
-    with open('model.pkl', 'rb') as f:
+    with open('model.pkl', 'rb') as f: #checking modelfile
         model = pickle.load(f)
 except FileNotFoundError:
     logging.error("Model file not found.")
