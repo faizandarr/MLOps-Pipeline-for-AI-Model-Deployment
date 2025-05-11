@@ -1,0 +1,8 @@
+[core]
+    remote = mlops
+['remote "mlops-project-drive"']
+    url = gdrive://1qRF2RdLNdleSSF9_MD3PjATthsghmhHB
+    gdrive_client_id = 1072520657897-6rhnk3tlbm4pv10hotnb9nhtco9ir241.apps.googleusercontent.com
+    gdrive_client_secret = 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
+['remote "mlops"']
+    url = gdrive://1qRF2RdLNdleSSF9_MD3PjATthsghmhHB

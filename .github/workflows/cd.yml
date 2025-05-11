@@ -1,0 +1,55 @@
+name: CD Pipeline
+
+on:
+  push:
+    branches:
+      - prod
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install Minikube and dependencies
+      run: |
+        curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+        chmod +x kubectl
+        sudo mv kubectl /usr/local/bin/
+        curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+        chmod +x minikube-linux-amd64
+        sudo mv minikube-linux-amd64 /usr/local/bin/
+        sudo apt-get update && sudo apt-get install -y conntrack
+        minikube start --driver=none --kubernetes-version=v1.20.0
+
+    - name: Deploy Application
+      run: |
+        kubectl create deployment mlops-project --image=${{ secrets.DOCKER_USERNAME }}/mlops-project:latest
+        kubectl expose deployment mlops-project --type=LoadBalancer --port=5000
+
+    - name: Get Minikube IP
+      run: minikube ip > minikube_ip.txt
+
+    - name: Get Service Port
+      run: |
+        kubectl get svc mlops-project -o=jsonpath='{.spec.ports[0].nodePort}' > service_port.txt
+
+    - name: Verify Kubernetes Deployment
+      run: |
+        kubectl get pods
+        kubectl get services
+        kubectl describe deployment mlops-project
+
+    - name: Construct Application URL
+      run: |
+        MINIKUBE_IP=$(cat minikube_ip.txt)
+        SERVICE_PORT=$(cat service_port.txt)
+        echo "http://${MINIKUBE_IP}:${SERVICE_PORT}" > app_url.txt
+
+    - name: Upload Application URL
+      uses: actions/upload-artifact@v3
+      with:
+        name: application-url
+        path: app_url.txt
