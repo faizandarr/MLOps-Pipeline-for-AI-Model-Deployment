@@ -7,7 +7,7 @@ import csv
 
 # Function to collect weather data
 def collect_weather_data():
-    API_KEY = 'e6545216d6704fdb90875513242611'
+    API_KEY = ''
     BASE_URL = 'http://api.weatherapi.com/v1/history.json'
     location = 'Islamabad'
     days = 5
